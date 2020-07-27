@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-hour Clock</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="calendar/css/vanilla-calendar-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="sidebar">
+        <nav class="navbar navbar-dark bg-info justify-content-between">
+            <a class="navbar-brand" id="sidebar-title">Navbar</a>
+            <button type="button" id="sidebar-close" class="btn btn-secondary btn-sm" onclick="sideBar.closeSidebar()">Close</button>
+        </nav>
+        <nav class="nav nav-pills bg-dark nav-justified" id="nav-switch" role="tablist">
+            <a class="nav-item nav-link active" data-toggle="tab" role="tab" href="#event-content">Events</a>
+            <a class="nav-item nav-link" data-toggle="tab" role="tab" href="#todo-content">TO DO</a>
+          </nav>
+        <div class="tab-content" id="sidebar-content" style="min-height: 100%;">
+            <div class="tab-pane fade show active" role="tabpanel" id="event-content"> 
+                <div class="tab-pane fade show active" role="tabpanel" id="accordion" style="min-height: 100%;">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="todo-content" role="tabpanel" style="min-height: 100%;">
+                <div class="list-group bg-dark" style="min-height: 100%;">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">
+                            <input class="form-check-input position-static mr-3" type="checkbox" id="blankCheckbox" value="option1">
+                            To Do 1
+                        </h5>
+                        <small>3 days ago</small>
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small>Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">
+                            <input class="form-check-input position-static mr-3" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                            To Do 3
+                        </h5>
+                        <small class="text-muted">3 days ago</small>
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">
+                            <input class="form-check-input position-static mr-3" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                            To Do 3
+                        </h5>
+                        <small class="text-muted">3 days ago</small>
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">
+                              <input class="form-check-input position-static mr-3" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                              To Do 1
+                          </h5>
+                          <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small>Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">
+                              <input class="form-check-input position-static mr-3" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                              To Do 3
+                          </h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">
+                              <input class="form-check-input position-static mr-3" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                              To Do 3
+                          </h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div id="choose">
+        <input type="file" data-toggle="popover" data-placement="left" title="Upload Calendar" onchange="read(this)" multiple="multiple" value="Add Calendar File(ICS)"/>
+        <input type="submit" onclick="read('nth')" value="Skip Calendar Import"/>
+    </div>
+    <div id="clock">
+        <div id="switch24">
+            <span style="border-left: none">Analog</span><input type="checkbox" data-toggle="toggle" id="switchAnalog" data-size="small" data-on="24Hr" data-off="12Hr" data-width="70" data-style="slow">
+            <span>Digital</span><input type="checkbox" data-toggle="toggle" id="switchDigital" data-size="small" data-on="24Hr" data-off="12Hr" data-width="70" data-style="slow">
+        </div>
+        <div class="border"></div>
+        <svg id="svg" viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- This will be replaced -->
+            <g>
+                
+                <path id="arc1" stroke="red"></path>
+                <text>
+                    <textPath data-toggle="popover" title="testing" xlink:href="#arc1" fill="red">
+                        <tspan>Work</tspan>
+                    </textPath>
+                </text>
+            </g>
+        </svg>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+        <div class="line line7"></div>
+        <div class="line line8"></div>
+        <div class="line line9"></div>
+        <div class="line line10"></div>
+        <div class="line line11"></div>
+        <div class="line line12"></div>
+        <div class="lineB lineB1"></div>
+        <div class="lineB lineB2"></div>
+        <div class="lineB lineB3"></div>
+        <div class="lineB lineB4"></div>
+        <div class="lineB lineB5"></div>
+        <div class="lineB lineB6"></div>
+        <div class="lineB lineB7"></div>
+        <div class="lineB lineB8"></div>
+        <div class="lineB lineB9"></div>
+        <div class="lineB lineB10"></div>
+        <div class="lineB lineB11"></div>
+        <div class="lineB lineB12"></div>
+        <div class="hours">
+            <div class="hour-box">
+                <div>12</div>
+            </div>
+            <div class="hour-box">
+                <div>1</div>
+            </div>
+            <div class="hour-box">
+                <div>2</div>
+            </div>
+            <div class="hour-box">
+                <div>3</div>
+            </div>
+            <div class="hour-box">
+                <div>4</div>
+            </div>
+            <div class="hour-box">
+                <div>5</div>
+            </div>
+            <div class="hour-box">
+                <div>6</div>
+            </div>
+            <div class="hour-box">
+                <div>7</div>
+            </div>
+            <div class="hour-box">
+                <div>8</div>
+            </div>
+            <div class="hour-box">
+                <div>9</div>
+            </div>
+            <div class="hour-box">
+                <div>10</div>
+            </div>
+            <div class="hour-box">
+                <div>11</div>
+            </div>
+            <div class="hour-box">
+                <div>12</div>
+            </div>
+            <div class="hour-box">
+                <div>1</div>
+            </div>
+            <div class="hour-box">
+                <div>2</div>
+            </div>
+            <div class="hour-box">
+                <div>3</div>
+            </div>
+            <div class="hour-box">
+                <div>4</div>
+            </div>
+            <div class="hour-box">
+                <div>5</div>
+            </div>
+            <div class="hour-box">
+                <div>6</div>
+            </div>
+            <div class="hour-box">
+                <div>7</div>
+            </div>
+            <div class="hour-box">
+                <div>8</div>
+            </div>
+            <div class="hour-box">
+                <div>9</div>
+            </div>
+            <div class="hour-box">
+                <div>10</div>
+            </div>
+            <div class="hour-box">
+                <div>11</div>
+            </div>
+        </div>
+        <div class="hand"></div>
+        <div class="modal" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content bg-dark">
+                <div class="modal-header bg-dark">
+                  <h5 class="modal-title" id="detailModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body bg-dark">
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <div class="digital">
+            <!-- <div class="time">12:00<span class="meridiem"> PM</span></div>
+            <div class="task">Work</div> -->
+        </div>
+    </div>
+    <div id="myCalendar" class="vanilla-calendar"></div>
+    <script src="calendar/js/vanilla-calendar-min.js"></script>
+    <script src="calendar/js/ical.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins/tooltipster/SVG/tooltipster-SVG.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
